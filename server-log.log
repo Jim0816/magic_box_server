@@ -1,0 +1,103 @@
+2022-07-29 21:24:01.693  INFO 44745 --- [main] com.jim.magicbox.MagicboxApplication     : Starting MagicboxApplication using Java 1.8.0_333 on JimdeMacBook-Air.local with PID 44745 (/Users/jim/Tools/git/magic_box_server/target/classes started by jim in /Users/jim/Tools/git/magic_box_server)
+2022-07-29 21:24:01.696  INFO 44745 --- [main] com.jim.magicbox.MagicboxApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-29 21:24:02.539  INFO 44745 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-07-29 21:24:02.553  INFO 44745 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+2022-07-29 21:24:02.649  WARN 44745 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jim.magicbox]' package. Please check your configuration.
+2022-07-29 21:24:03.080  INFO 44745 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-29 21:24:03.086  INFO 44745 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-29 21:24:03.087  INFO 44745 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-29 21:24:03.232  INFO 44745 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-29 21:24:03.232  INFO 44745 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1464 ms
+2022-07-29 21:24:03.976  INFO 44745 --- [cluster-ClusterId{value='62e3df737884ca555271ac90', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157) ~[mongodb-driver-core-4.6.1.jar:na]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_333]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_333]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_333]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_333]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_333]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_333]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_333]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.6.1.jar:na]
+	... 4 common frames omitted
+
+2022-07-29 21:24:03.982  INFO 44745 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "12.2.1"}, "platform": "Java/Oracle Corporation/1.8.0_333-b02"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@741f8dbe]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2022-07-29 21:24:04.295  INFO 44745 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-29 21:24:04.312  INFO 44745 --- [main] com.jim.magicbox.MagicboxApplication     : Started MagicboxApplication in 3.141 seconds (JVM running for 3.932)
+2022-07-29 21:24:51.867  INFO 44750 --- [main] com.jim.magicbox.MagicboxApplication     : Starting MagicboxApplication using Java 1.8.0_333 on JimdeMacBook-Air.local with PID 44750 (/Users/jim/Tools/git/magic_box_server/target/classes started by jim in /Users/jim/Tools/git/magic_box_server)
+2022-07-29 21:24:51.871  INFO 44750 --- [main] com.jim.magicbox.MagicboxApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-29 21:24:52.625  INFO 44750 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-07-29 21:24:52.639  INFO 44750 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+2022-07-29 21:24:52.759  WARN 44750 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jim.magicbox]' package. Please check your configuration.
+2022-07-29 21:24:53.220  INFO 44750 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-29 21:24:53.226  INFO 44750 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-29 21:24:53.227  INFO 44750 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-29 21:24:53.341  INFO 44750 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-29 21:24:53.341  INFO 44750 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1427 ms
+2022-07-29 21:24:54.011  INFO 44750 --- [cluster-ClusterId{value='62e3dfa54410740bc449a856', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157) ~[mongodb-driver-core-4.6.1.jar:na]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_333]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_333]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[na:1.8.0_333]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[na:1.8.0_333]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[na:1.8.0_333]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[na:1.8.0_333]
+	at java.net.Socket.connect(Socket.java:606) ~[na:1.8.0_333]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.6.1.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.6.1.jar:na]
+	... 4 common frames omitted
+
+2022-07-29 21:24:54.013  INFO 44750 --- [main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "12.2.1"}, "platform": "Java/Oracle Corporation/1.8.0_333-b02"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@212dfd39]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2022-07-29 21:24:54.298  INFO 44750 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-29 21:24:54.310  INFO 44750 --- [main] com.jim.magicbox.MagicboxApplication     : Started MagicboxApplication in 2.891 seconds (JVM running for 3.495)
+2022-07-29 21:25:27.314  INFO 44756 --- [main] com.jim.magicbox.MagicboxApplication     : Starting MagicboxApplication using Java 1.8.0_333 on JimdeMacBook-Air.local with PID 44756 (/Users/jim/Tools/git/magic_box_server/target/classes started by jim in /Users/jim/Tools/git/magic_box_server)
+2022-07-29 21:25:27.319  INFO 44756 --- [main] com.jim.magicbox.MagicboxApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-29 21:25:28.211  WARN 44756 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jim.magicbox]' package. Please check your configuration.
+2022-07-29 21:25:28.711  INFO 44756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-29 21:25:28.720  INFO 44756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-29 21:25:28.721  INFO 44756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-29 21:25:28.840  INFO 44756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-29 21:25:28.840  INFO 44756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1442 ms
+2022-07-29 21:25:29.383  INFO 44756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-29 21:25:29.400  INFO 44756 --- [main] com.jim.magicbox.MagicboxApplication     : Started MagicboxApplication in 2.576 seconds (JVM running for 3.247)
+2022-07-29 21:44:58.719  INFO 44922 --- [main] com.jim.magicbox.MagicboxApplication     : Starting MagicboxApplication using Java 1.8.0_333 on JimdeMacBook-Air.local with PID 44922 (/Users/jim/Tools/git/magic_box_server/target/classes started by jim in /Users/jim/Tools/git/magic_box_server)
+2022-07-29 21:44:58.723  INFO 44922 --- [main] com.jim.magicbox.MagicboxApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-29 21:44:59.605  WARN 44922 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jim.magicbox]' package. Please check your configuration.
+2022-07-29 21:45:00.086  INFO 44922 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-29 21:45:00.095  INFO 44922 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-29 21:45:00.095  INFO 44922 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-29 21:45:00.238  INFO 44922 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-29 21:45:00.238  INFO 44922 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1471 ms
+2022-07-29 21:45:00.788  INFO 44922 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-29 21:45:00.812  INFO 44922 --- [main] com.jim.magicbox.MagicboxApplication     : Started MagicboxApplication in 2.656 seconds (JVM running for 3.463)
+2022-07-29 21:45:08.360  INFO 44922 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 21:45:08.363  INFO 44922 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-29 21:45:08.369  INFO 44922 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-07-29 21:45:08.399  WARN 44922 --- [http-nio-8081-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-07-29 21:46:00.044  INFO 44932 --- [main] com.jim.magicbox.MagicboxApplication     : Starting MagicboxApplication using Java 1.8.0_333 on JimdeMacBook-Air.local with PID 44932 (/Users/jim/Tools/git/magic_box_server/target/classes started by jim in /Users/jim/Tools/git/magic_box_server)
+2022-07-29 21:46:00.047  INFO 44932 --- [main] com.jim.magicbox.MagicboxApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-29 21:46:00.893  WARN 44932 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jim.magicbox]' package. Please check your configuration.
+2022-07-29 21:46:01.391  INFO 44932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-29 21:46:01.398  INFO 44932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-29 21:46:01.398  INFO 44932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-29 21:46:01.513  INFO 44932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-29 21:46:01.514  INFO 44932 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1427 ms
+2022-07-29 21:46:02.047  INFO 44932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-29 21:46:02.063  INFO 44932 --- [main] com.jim.magicbox.MagicboxApplication     : Started MagicboxApplication in 2.463 seconds (JVM running for 3.044)
+2022-07-29 21:46:03.666  INFO 44932 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-29 21:46:03.667  INFO 44932 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-29 21:46:03.670  INFO 44932 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms

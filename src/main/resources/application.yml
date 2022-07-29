@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  #数据源系统配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.43.173.159:3306/heps_data_manage?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 132556*QAZqaz
+
+
+mybatis-plus:
+  mapper-locations: classpath:com/ljm/**/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.ljm.entity
+
+logging:
+  file:
+    path: /opt/log #日志文件名称
+    name: server-log.log
+  level:
+    root: info #日志级别 root表示所有包，也可以单独配置具体包 fatal error warn info debug trace off

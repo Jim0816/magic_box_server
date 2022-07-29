@@ -1,0 +1,68 @@
+2022-07-29 21:19:42.656  INFO 44724 --- [main] com.jim.magicbox.MagicboxApplication     : Starting MagicboxApplication using Java 1.8.0_333 on JimdeMacBook-Air.local with PID 44724 (/Users/jim/Tools/git/magic_box_server/target/classes started by jim in /Users/jim/Tools/git/magic_box_server)
+2022-07-29 21:19:42.664  INFO 44724 --- [main] com.jim.magicbox.MagicboxApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-29 21:19:43.805  INFO 44724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-07-29 21:19:43.824  INFO 44724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 MongoDB repository interfaces.
+2022-07-29 21:19:43.939  WARN 44724 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jim.magicbox]' package. Please check your configuration.
+2022-07-29 21:19:44.503  INFO 44724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-29 21:19:44.515  INFO 44724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-29 21:19:44.515  INFO 44724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-29 21:19:44.766  INFO 44724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-29 21:19:44.767  INFO 44724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1978 ms
+2022-07-29 21:19:45.264  WARN 44724 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-07-29 21:19:45.269  INFO 44724 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-29 21:19:45.288  INFO 44724 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-29 21:19:45.306 ERROR 44724 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2022-07-29 21:20:31.058  INFO 44730 --- [main] com.jim.magicbox.MagicboxApplication     : Starting MagicboxApplication using Java 1.8.0_333 on JimdeMacBook-Air.local with PID 44730 (/Users/jim/Tools/git/magic_box_server/target/classes started by jim in /Users/jim/Tools/git/magic_box_server)
+2022-07-29 21:20:31.062  INFO 44730 --- [main] com.jim.magicbox.MagicboxApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-29 21:20:31.906  INFO 44730 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-07-29 21:20:31.920  INFO 44730 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 MongoDB repository interfaces.
+2022-07-29 21:20:32.029  WARN 44730 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.jim.magicbox]' package. Please check your configuration.
+2022-07-29 21:20:32.498  INFO 44730 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-29 21:20:32.505  INFO 44730 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-29 21:20:32.505  INFO 44730 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-29 21:20:32.625  INFO 44730 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-29 21:20:32.625  INFO 44730 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1515 ms
+2022-07-29 21:20:33.015  WARN 44730 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-07-29 21:20:33.020  INFO 44730 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-29 21:20:33.040  INFO 44730 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-29 21:20:33.058 ERROR 44730 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
