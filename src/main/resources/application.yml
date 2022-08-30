@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8002
 
 spring:
   #数据源系统配置
@@ -8,6 +8,10 @@ spring:
     url: jdbc:mysql://101.43.173.159:3306/heps_data_manage?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
     password: 132556*QAZqaz
+  data:
+    mongodb:
+      #uri: mongodb://jim:164411@202.122.39.37:27017/jimTest
+      uri: mongodb://jim:164411@101.43.173.159:27017/magic_wifi_box
 
 
 mybatis-plus:

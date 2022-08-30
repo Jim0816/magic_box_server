@@ -1,0 +1,41 @@
+{
+  "radiotap_present": {
+    "radiotap_present_channel": "1",
+    "radiotap_present_dbm_antsignal": "1",
+    "radiotap_present_dbm_antnoise": "0",
+    "radiotap_present_antenna": "0"
+  },
+  "radiotap_channel_freq": "2412",
+  "radiotap_channel_flags_tree": {
+    "radiotap_channel_flags_700mhz": "0",
+    "radiotap_channel_flags_800mhz": "0",
+    "radiotap_channel_flags_900mhz": "0",
+    "radiotap_channel_flags_turbo": "0",
+    "radiotap_channel_flags_cck": "1",
+    "radiotap_channel_flags_ofdm": "0",
+    "radiotap_channel_flags_2ghz": "1",
+    "radiotap_channel_flags_5ghz": "0",
+    "radiotap_channel_flags_passive": "0",
+    "radiotap_channel_flags_dynamic": "0",
+    "radiotap_channel_flags_gfsk": "0",
+    "radiotap_channel_flags_gsm": "0",
+    "radiotap_channel_flags_sturbo": "0",
+    "radiotap_channel_flags_half": "0",
+    "radiotap_channel_flags_quarter": "0"
+  },
+  "radiotap_dbm_antsignal_1": "-33",
+  "radiotap_dbm_antsignal_2": "-33",
+  "radiotap_antenna_2": "0",
+  "radiotap_dbm_antsignal_3": "-33",
+  "radiotap_antenna_3": "1",
+  "wlan_radio": {
+    "wlan_radio_frequency": "2412",
+    "wlan_radio_signal_dbm": "-33"
+  },
+  "wlan": {
+    "wlan_bssid": "e6:2a:7d:83:9d:f7"
+  },
+  "wlan_mgt": {
+    "wlan_ssid": "TP-LINK_1111"
+  }
+}
